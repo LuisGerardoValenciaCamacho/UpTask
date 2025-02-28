@@ -1,0 +1,18 @@
+.alerta {
+    padding: 1rem 1rem 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    &.error {
+        background-color: lighten($rojo, 60%);
+        border-left: 0.5rem solid $rojo;
+        color: $rojo;
+    }
+    &.correcto {
+        background-color: lighten($verde, 60%);
+        border-left: 0.5rem solid $verde;
+        color: $verde;
+    }
+}

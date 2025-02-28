@@ -1,0 +1,35 @@
+.mostrar {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    
+    .mostrar-campo {
+        @include tablet {
+            width: 100vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        padding: 1.5rem 0;
+        border-bottom: solid 0.5px darken($grisClaro, 20%);
+        &:last-of-type {
+            border-bottom: none;
+        }
+        .mostrar-campo-botones {
+            display: flex;
+            gap: 1rem;
+            @include telefono {
+                justify-content: end;
+                margin-right: 2rem;
+            }
+            .btn-rojo, .btn-naranja, .btn-verde {
+                border-radius: 1rem;
+                padding: 1rem;
+            }
+        }
+        p {
+            cursor: pointer;
+        }
+    }
+    .no-tareas {
+        text-align: center;
+    }
+}

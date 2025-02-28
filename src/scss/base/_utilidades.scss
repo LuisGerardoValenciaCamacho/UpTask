@@ -1,0 +1,74 @@
+.mt {
+    margin-top: 5rem;
+}
+
+.center {
+    text-align: -webkit-center;
+}
+
+.cyan {
+    h1, input {
+        color: $cyan;
+    }
+}
+
+.btn-cyan {
+    @include boton($cyan, $blanco);
+}
+
+.naranja {
+    h1, input {
+        color: $naranja;
+    }
+}
+
+.btn-naranja {
+    @include boton($naranja, $blanco);
+}
+
+.morado {
+    h1, input {
+        color: $morado;
+    }
+}
+
+.btn-morado {
+    @include boton($morado, $blanco);
+}
+
+.rosa {
+    h1, input {
+        color: $rosa;
+    }
+}
+
+.btn-rosa {
+    @include boton($rosa, $blanco);
+}
+
+.azul {
+    h1, input {
+        color: $azul;
+    }
+}
+
+.btn-azul {
+    @include boton($azul, $blanco);
+}
+
+.btn-indigo-darken {
+    @include boton(darken($indigo, 20%), $blanco);
+    border-radius: 0.5rem;
+}
+
+.btn-indigo {
+    @include boton($indigo, $blanco);
+}
+
+.btn-rojo {
+    @include boton($rojo, $blanco);
+}
+
+.btn-verde {
+    @include boton($verde, $blanco);
+}

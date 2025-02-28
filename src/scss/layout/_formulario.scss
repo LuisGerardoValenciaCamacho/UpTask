@@ -1,0 +1,75 @@
+.formulario {
+    margin-top: 5rem;
+    .campo {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        label {
+            flex: 0 0 10rem;
+        }
+        input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            background-color: lighten($gris, 40%);
+        }
+    }
+}
+
+.formulario-extra {
+    text-align-last: center;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+    margin-top: 5rem;
+    .registro, .password {
+        margin-bottom: 2rem;
+        @include boton-extra();
+    }
+}
+
+.formulario-dashboard {
+    input {
+        @include tablet {
+            width: 60%;
+        }
+        border: none;
+        padding: 1rem 0.7rem;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        @include telefono {
+            width: 95%;
+        }
+    }
+}
+
+.filtros {
+    @include tablet {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+    padding: 3rem 0 3rem 2rem;
+    background-color: $blanco;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    font-weight: 600;
+    .name-filtros {
+        font-size: 4rem;
+        font-weight: 900;
+        color: $indigo;
+    }
+    .value-filtros {
+        margin-left: 2.5rem;
+        input {
+            margin-left: 0.5rem;
+            color: $indigo;
+        }
+    }
+    @include telefono {
+        .value-filtros {
+            margin-top: 2rem;
+        }
+    }
+}

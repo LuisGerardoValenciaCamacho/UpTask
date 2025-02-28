@@ -1,0 +1,116 @@
+.dashboard {
+    background-color: $grisClaro;
+    @include tablet {
+        display: flex;
+        height: 100vh; // Height de la pantalla
+    }
+    .sidebar {
+        background-color: $indigo;
+        text-align: center;
+        padding: 2rem;
+        .title {
+            color: $blanco;
+            margin: 0 2rem;
+        }
+        input {
+            cursor: pointer;
+            padding: 0.5rem;
+            width: 100%;
+            background: none;
+            border: none;
+            color: $blanco;
+            border-radius: 0.5rem;
+            transition-property: background-color;
+            transition-duration: 300ms;
+            text-transform: uppercase;
+            @include tablet {
+                text-align: left;
+            }
+            &:hover {
+                background-color: darken($indigo, 20%);
+            }
+        }
+    }
+    .navegacion-accion {
+        margin-top: 1.2rem;
+    }
+    .contenido {
+        flex: 1;
+        overflow: scroll;
+        .contenido-proyectos {
+            margin-left: 2rem;
+            .no-proyectos {
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+.proyectos {
+    display: block;
+    @include tablet {
+        display: flex;
+    }
+    .proyecto {        
+        @include tablet {
+            //display: flex;
+            width: 24rem;
+            ~ .proyecto {
+                margin-left: 2rem;
+            }
+        }
+        background-color: $indigo;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        width: 95%;
+        input {
+            color: $blanco;
+            padding: 3.5rem 6rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    }
+}
+
+.no-proyectos {
+    input {
+        border: none;
+        background-color: $grisClaro;
+        color: $indigo;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    form {
+        margin: 0;
+    }
+}
+
+.barra {
+    align-items: center;
+    background-color: $blanco;
+    box-shadow: 1px 12px 9px -13px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+    input {
+        margin: 0;
+    }
+    span {
+        font-weight: 700;
+        color: $indigo;
+    }
+}
+
+.seleccionado {
+    background-color: darken($indigo, 20%);
+    border-radius: 0.5rem;
+}
